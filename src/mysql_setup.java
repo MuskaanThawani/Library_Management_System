@@ -50,6 +50,16 @@ public class mysql_setup {
                 String sql7="CREATE TABLE Issue_Book (ISBN varchar(5), SID varchar(15),IssueDate date not null,foreign key Fk1(ISBN) references Books(ISBN),foreign key Fk2(SID) references Student(SID));";
                 String sql8="CREATE TABLE Record (SID varchar(15),ISBN varchar(5), IssueDate date default null, ReturnDate date default null,foreign key Fk1(SID) references Student(SID), foreign key Fk2(ISBN) references Books(ISBN) );";
 
+                String sql9="Insert into Books values(\"B101\",\"Harry Potter\",\"Jk Rowling\",800,2);";
+                String sql10="Insert into Books values(\"B102\",\"If I die today\",\"Sashi desh pandey\",950,3);";
+                String sql11="Insert into Books values(\"B103\",\"Gone girl\",\"Gillian Flynn\",700,1);";
+                String sql12="Insert into Books values(\"B104\",\"Ikigai\",\"Murakami\",1000,5);";
+                String sql13="Insert into Books values(\"B105\",\"Percy jackson\",\"Rick Riordan\",500,3);";
+                String sql14="Insert into Books values(\"B106\",\"Hunger Games\",\"Suzanne Collins\",680,4);";
+                String sql15="Insert into Books values(\"B107\",\"Divergent\",\"Veronica Roth\",950,3);";
+                String sql16="Insert into Books values(\"B108\",\"The Hobit\",\"JRR Tolkien\",800,2);";
+                String sql17="Insert into Books values(\"B109\",\"Rich Dad Poor Dad\",\"Robert Kiyosaki\",1200,3);";
+                
                 statement.executeUpdate(sql1);
                 statement.executeUpdate(sql2);
                 statement.executeUpdate(sql3);
@@ -58,6 +68,16 @@ public class mysql_setup {
                 statement.executeUpdate(sql6);
                 statement.executeUpdate(sql7);
                 statement.executeUpdate(sql8);
+                statement.executeUpdate(sql9);
+                statement.executeUpdate(sql10);
+                statement.executeUpdate(sql11);
+                statement.executeUpdate(sql12);
+                statement.executeUpdate(sql13);
+                statement.executeUpdate(sql14);
+                statement.executeUpdate(sql15);
+                statement.executeUpdate(sql16);
+                statement.executeUpdate(sql17);
+                
                 JOptionPane.showMessageDialog(null,"Database and Table has been created successfully", "System Message", JOptionPane.INFORMATION_MESSAGE);
             }
             statement.close();
